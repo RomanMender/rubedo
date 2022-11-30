@@ -1,0 +1,25 @@
+name: "Read and update JSON/YAML"
+description: "Read JSON/YAML from comments and update it to a file"
+inputs:
+  comment:
+    description: "The comment"
+    required: true
+    default: ""
+  target:
+    description: "Target file"
+    required: true
+    default: "./target.json"
+  default-username:
+    description: "Default user name"
+    required: false
+    default: "librehsbot"
+  format:
+    description: "The format to write as. Supports json and yaml for now."
+    required: false
+    default: "json"
+outputs:
+  username:
+    description: "Username of whom issued this PR"
+runs:
+  using: node12
+  main: dist/index.js
