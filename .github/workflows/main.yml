@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Download file
         run: |
-          curl -o src/plugins/GlobalBans/rb.ts https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts
+          ls
+          curl -o rb.ts https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts
           git config --global user.email "roman@realmbot.dev"
           git config --global user.name "Realm Bot"
           git add src/plugins/GlobalBans/rb.ts
