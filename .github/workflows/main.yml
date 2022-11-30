@@ -13,4 +13,13 @@ jobs:
         uses: ./
         with:
           file: "src/plugins/GlobalBans/rb.ts"
-          url: https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts
+          url: "https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts"
+      - name: Pull Request
+        uses: peter-evans/create-pull-request@v3.6.0
+        with:
+          committer: Realm Bot <roman@realmbot.dev>
+          author: Realm Bot
+          commit-message: "Daily Global ban database update"
+          title: "Ban Database update"
+          body: "This is an automated github workflow designed to update the ban database with realm bots."
+          branch: "main"
