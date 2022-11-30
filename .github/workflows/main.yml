@@ -12,9 +12,9 @@ jobs:
       - name: Download file
         run: |
           echo ls
-          curl -o rb.ts https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts
+          curl -o src/plugins/GlobalBans/rb.ts https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts
           git config --global user.email "roman@realmbot.dev"
           git config --global user.name "Realm Bot"
-          git add rb.ts
+          git add src/plugins/GlobalBans/rb.ts
           git commit -m "Update Ban Database"
           git push
