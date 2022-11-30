@@ -1,0 +1,16 @@
+name: Ban list fetch
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  fetch-database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fetch database
+        uses: ./
+        with:
+          file: "src/plugins/GlobalBans/rb.ts"
+          url: https://cdn.discordapp.com/attachments/1039615673527177296/1047537588388507728/list.ts
